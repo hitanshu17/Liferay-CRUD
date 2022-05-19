@@ -1,0 +1,8 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.3"
+	
+	// Adding Gradebook API As Dependency For Gradebook Web Portlet
+	compileOnly project(":modules:gradebook:gradebook-api")
+}

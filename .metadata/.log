@@ -1,0 +1,26 @@
+!SESSION 2022-05-19 14:19:55.873 -----------------------------------------------
+eclipse.buildId=3.9.4.202108090632-ga5
+java.version=1.8.0-262
+java.vendor=OpenLogic-OpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.liferay.ide.studio.ui.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.liferay.ide.studio.ui.product
+
+!ENTRY org.eclipse.egit.core 1 0 2022-05-19 14:20:22.207
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.ui.editors 4 10001 2022-05-19 14:20:23.895
+!MESSAGE Ignoring template 'log' since it has no id.
+
+!ENTRY org.eclipse.ui 4 4 2022-05-19 14:20:24.112
+!MESSAGE Referenced part does not exist yet: fast.
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-05-19 14:20:26.176
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ASUS'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.rse.core 1 0 2022-05-19 14:20:36.083
+!MESSAGE Disconnect operation timed out after 120000 milliseconds.

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.liferay.training.gradebook" auto-namespace-tables="true">
+	<!-- For Providing Author Details For This Service Builder -->
+	<author>hgrahul</author>
+	
+	<!-- For Providing Namespace Details For The Entities We Define Here -->
+	<namespace>Gradebook</namespace>
+	
+	<!-- Defining Entity By Name Assignment Which Will Be Used Local and As Well As A Remote Service (Web Services) -->
+	<entity name="Assignment" local-service="true" remote-service="true" uuid="true">
+		<!-- PK fields -->
+		<column name="assignmentId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+
+		<!-- Defining Now Some Actual Field For Assignment -->
+		<column name="title" type="String" localized="true"/>
+		<column name="description" type="String" localized="true"/>
+		<column name="dueDate" type="Date" />
+
+		<!-- Liferay Status Field For Workflow and Asset Related Matter -->	
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+					
+		
+		<!-- Ordering The Entries For A List Of Assignment -->
+		<order by="asc">
+			<order-column name="title"/>
+		</order>
+		
+		<!-- Find All Assignment Based On Website (GroupId) -->
+		<finder return-type="Collection" name="GroupId">
+			<finder-column name="groupId"/>	
+		</finder>
+		
+		<!-- Inherit Or Refer Group Funcionality To Assignment -->
+		<reference entity="Group" package-path="com.liferay.portal"/>
+		
+		<!-- Need To Integrate With Asset Framework -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset"/>
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset"/>
+		<reference entity="AssetLink" package-path="com.liferay.portlet.asset"/>
+	</entity>
+	<!-- Defining Submission Entity Which Also Depends On Assignment Entity -->
+	<entity name="Submission" local-service="true" remote-service="true">
+		<!-- PK fields -->
+		<column name="submissionId" primary="true" type="long"></column>
+
+		<!-- Group instance -->
+		<column name="groupId" type="long"></column>
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="userId" type="long"></column>
+		<column name="userName" type="String"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		
+		<!-- Refering To The Assignment Entity (Foreign Key) -->
+        <column name="assignmentId" type="long"></column>
+        
+        <!-- Defining Now Some Actual Submission Fields -->
+        <column name="studentId" type="long" />
+		<column name="submitDate" type="Date" />
+		<column name="submissionText" type="String" />
+		<column name="comment" type="String" />
+		<column name="grade" type="int" />
+		
+		<!-- Defining All Finders -->
+		<!-- Find All Submission Based On Website (GroupId) -->
+		<finder return-type="Collection" name="GroupId">
+			<finder-column name="groupId"/>
+		</finder>
+		
+		<!-- Find All Submission Based On Website (GroupId) & AssignmentId-->
+		<finder return-type="Collection" name="G_A">
+			<finder-column name="groupId"/>
+			<finder-column name="assignmentId"/>
+		</finder>
+		
+		<!-- Find All Submission Based On StudentId -->
+		<finder return-type="Collection" name="StudentId">
+			<finder-column name="studentId"/>
+		</finder>
+		
+		<!-- Find All Submission Based On StudentId & AssignmentId-->
+		<finder return-type="Collection" name="StudentIdAssignmentId">
+			<finder-column name="studentId"/>
+			<finder-column name="assignmentId"/>
+		</finder>
+		
+		<!-- Need To Integrate With Asset Framework -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset"/>
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset"/>
+	</entity>
+	<!-- Some Exception We May Want To Customize -->
+	<exceptions>
+		<exception>AssignmentValidation</exception>
+		<exception>SubmissionValidation</exception>
+	</exceptions>
+</service-builder>

@@ -1,0 +1,63 @@
+<%-- For Rendering URL For Showing Individual Assignment Entries --%>
+<portlet:renderURL var="viewAssignmentURL">
+	<portlet:param name="mvcRenderCommandName" value="<%= MVCCommandNames.VIEW_ASSIGNMENT %>"/>
+	<portlet:param name="redirect" value="${currentURL}"/>
+	<portlet:param name="assignmentId" value="${entry.assignmentId}"/>
+</portlet:renderURL>
+
+<%-- Display Different Styled Assignment Information Based On The Request Of Style --%>
+<c:choose>
+	<%-- Descriptive View --%>
+	<c:when test='${assignmentsManagementToolbarDisplayContext.getDisplayStyle().equals("descriptive")}'>
+		<%-- User Information --%>
+		<liferay-ui:search-container-column-user showDetails="<%= false %>" userId="<%= entry.getUserId() %>"/>
+		
+		<%-- Forming A Message Like Rahul Modified 10 Minutes Ago --%>
+		<liferay-ui:search-container-column-text colspan="<%=2%>">
+			<%
+				String modificationDateDescription = LanguageUtil.getTimeDescription(request, System.currentTimeMillis() - entry.getModifiedDate().getTime(), true);
+			%>
+			
+			<h5 class="text-default">
+				<liferay-ui:message arguments="<%= new String[]{entry.getUserName(), modificationDateDescription} %>" key="x-modified-x-ago"></liferay-ui:message>
+			</h5>
+			<h5>
+				<aui:a href="${viewAssignmentURL}">
+					${entry.getTitle(locale)}
+				</aui:a>
+			</h5>
+		</liferay-ui:search-container-column-text>
+		
+		<%-- Trying To Have Action Performed. Like Edit, Delete, View Etc --%>
+		<liferay-ui:search-container-column-jsp name="actions" path="/assignment/entry_actions.jsp"/>
+	</c:when>
+	<%-- Icon View --%>
+	<c:when test='${assignmentsManagementToolbarDisplayContext.getDisplayStyle().equals("icon")}'>
+		<%
+			row.setCssClass("lfr-asset-item");
+		%>
+		
+		<liferay-ui:search-container-column-text>
+			<%-- Vertical Card --%>
+			<liferay-frontend:icon-vertical-card title="${entry.getTitle(locale)}" actionJspServletContext="<%= application %>" resultRow="${row}" url="${viewAssignmentURL}" icon="cards2" actionJsp="/assignment/entry_actions.jsp">
+				<liferay-frontend:vertical-card-sticker-bottom>
+					<liferay-ui:user-portrait cssClass="sticker sticker-bottom" userId="${entry.userId}"/>
+				</liferay-frontend:vertical-card-sticker-bottom>
+				<liferay-frontend:vertical-card-footer>
+					<div class="truncate-text">
+						<%= HtmlUtil.stripHtml(entry.getDescription(locale)) %>
+					</div>
+				</liferay-frontend:vertical-card-footer>
+			</liferay-frontend:icon-vertical-card>
+		</liferay-ui:search-container-column-text>
+	</c:when>
+	<%-- Table View --%>
+	<c:otherwise>
+		<liferay-ui:search-container-column-text name="title" value="<%= entry.getTitle(locale) %>" href="${viewAssignmentURL}"/>
+		<liferay-ui:search-container-column-user name="author" userId="${entry.userId }"/>
+		<liferay-ui:search-container-column-date name="create-date" property="createDate"/>
+		
+		<%-- Trying To Have Action Performed. Like Edit, Delete, View Etc --%>
+		<liferay-ui:search-container-column-jsp name="actions" path="/assignment/entry_actions.jsp"/>
+	</c:otherwise>
+</c:choose>
