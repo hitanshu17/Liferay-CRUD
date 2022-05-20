@@ -13,7 +13,7 @@ import org.osgi.service.component.annotations.Reference;
 
 /**
  * 
- * @author hgrahul
+ * @author IP
  * The Model Indexer Writer Contributor Configures The Re-Indexing And Batch Re-Indexing Behavior For Model Entity.
  */
 @Component(immediate = true, property = "indexer.class.name=com.liferay.training.gradebook.model.Assignment", service = ModelIndexerWriterContributor.class)

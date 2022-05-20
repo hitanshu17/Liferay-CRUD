@@ -13,7 +13,7 @@ import org.osgi.service.component.annotations.Reference;
 
 /**
  * 
- * @author hgrahul
+ * @author IP
  * The Keyword Query Contributor Contributes To The Model-Specific Clauses To The Ongoing Search
  */
 @Component(immediate = true, property = "indexer.class.name=com.liferay.training.gradebook.model.Assignment", service = KeywordQueryContributor.class)

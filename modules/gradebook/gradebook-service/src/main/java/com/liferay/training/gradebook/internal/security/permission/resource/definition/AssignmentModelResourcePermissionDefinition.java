@@ -20,7 +20,7 @@ import org.osgi.service.component.annotations.Reference;
 
 /**
  * 
- * @author hgrahul
+ * @author IP
  * This Class Represents For Registering The Model and Top-Level Resource Permissions
  */
 @Component(immediate = true, service = ModelResourcePermissionDefinition.class)

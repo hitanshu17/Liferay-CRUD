@@ -11,7 +11,7 @@ import org.osgi.service.component.annotations.Reference;
 
 /**
  * 
- * @author hgrahul
+ * @author IP
  * This Class Represents Class For Checking Entity Permissions
  */
 @Component(immediate = true, service = AssignmentPermission.class)

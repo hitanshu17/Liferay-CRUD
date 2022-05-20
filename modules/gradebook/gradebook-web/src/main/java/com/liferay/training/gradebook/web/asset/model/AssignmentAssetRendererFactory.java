@@ -30,7 +30,7 @@ import org.osgi.service.component.annotations.Reference;
 
 /**
  * 
- * @author hgrahul
+ * @author IP
  * This Class Represent or Takes Care of Asset Rendering and Handling The Renderer Itself
  */
 @Component(immediate = true, property = "javax.portlet.name=" + GradebookPortletKeys.PORTLET_NAME, service = AssetRendererFactory.class)

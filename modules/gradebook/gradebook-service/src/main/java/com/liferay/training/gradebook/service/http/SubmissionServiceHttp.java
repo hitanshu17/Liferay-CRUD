@@ -37,7 +37,7 @@ package com.liferay.training.gradebook.service.http;
  * The HTTP utility is only generated for remote services.
  * </p>
  *
- * @author hgrahul
+ * @author IP
  * @see SubmissionServiceSoap
  * @generated
  */

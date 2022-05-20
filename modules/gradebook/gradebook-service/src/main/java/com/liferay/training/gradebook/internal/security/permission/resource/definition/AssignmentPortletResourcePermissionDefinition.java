@@ -10,7 +10,7 @@ import org.osgi.service.component.annotations.Reference;
 
 /**
  * 
- * @author hgrahul
+ * @author IP
  * This Class Represent Registering Gradebook Portlet Resource and Top-Level Permissions
  */
 @Component(immediate = true, service = PortletResourcePermissionDefinition.class)

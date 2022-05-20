@@ -18,7 +18,7 @@ import com.liferay.portal.kernel.exception.PortalException;
 import java.util.List;
 
 /**
- * @author hgrahul
+ * @author IP
  */
 public class AssignmentValidationException extends PortalException {
 

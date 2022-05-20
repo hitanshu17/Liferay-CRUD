@@ -35,7 +35,7 @@ import org.osgi.service.component.annotations.ReferencePolicy;
 import org.osgi.service.component.annotations.ReferencePolicyOption;
 
 /**
- * @author hgrahul
+ * @author IP
  */
 @Component(
 	property = {

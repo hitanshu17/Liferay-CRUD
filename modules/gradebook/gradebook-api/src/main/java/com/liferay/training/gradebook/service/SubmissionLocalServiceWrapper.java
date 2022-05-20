@@ -19,7 +19,7 @@ import com.liferay.portal.kernel.service.ServiceWrapper;
 /**
  * Provides a wrapper for {@link SubmissionLocalService}.
  *
- * @author hgrahul
+ * @author IP
  * @see SubmissionLocalService
  * @generated
  */

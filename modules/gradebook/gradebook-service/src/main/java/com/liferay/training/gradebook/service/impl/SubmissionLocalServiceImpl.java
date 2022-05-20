@@ -20,7 +20,7 @@ import com.liferay.training.gradebook.service.base.SubmissionLocalServiceBaseImp
 import org.osgi.service.component.annotations.Component;
 
 /**
- * @author hgrahul
+ * @author IP
  */
 @Component(
 	property = "model.class.name=com.liferay.training.gradebook.model.Submission",

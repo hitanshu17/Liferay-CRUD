@@ -49,7 +49,7 @@ package com.liferay.training.gradebook.service.http;
  * The SOAP utility is only generated for remote services.
  * </p>
  *
- * @author hgrahul
+ * @author IP
  * @see SubmissionServiceHttp
  * @deprecated As of Athanasius (7.3.x), with no direct replacement
  * @generated

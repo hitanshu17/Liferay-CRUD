@@ -23,7 +23,7 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 
 /**
- * @author hgrahul
+ * @author IP
  * @generated
  */
 @Component(immediate = true, service = {})

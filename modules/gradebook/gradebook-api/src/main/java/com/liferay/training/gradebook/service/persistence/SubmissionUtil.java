@@ -36,7 +36,7 @@ import org.osgi.util.tracker.ServiceTracker;
  * Caching information and settings can be found in <code>portal.properties</code>
  * </p>
  *
- * @author hgrahul
+ * @author IP
  * @see SubmissionPersistence
  * @generated
  */

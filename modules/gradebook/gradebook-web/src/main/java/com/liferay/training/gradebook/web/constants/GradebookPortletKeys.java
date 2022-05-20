@@ -1,7 +1,7 @@
 package com.liferay.training.gradebook.web.constants;
 
 /**
- * @author hgrahul
+ * @author IP
  */
 public class GradebookPortletKeys {
 	// This Represent As Portlet Identification or Portlet Name (Internal Name)

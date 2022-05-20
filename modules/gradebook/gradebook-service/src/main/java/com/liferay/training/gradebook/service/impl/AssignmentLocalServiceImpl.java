@@ -39,7 +39,7 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * @author hgrahul
+ * @author IP
  */
 @Component(
 	property = "model.class.name=com.liferay.training.gradebook.model.Assignment",

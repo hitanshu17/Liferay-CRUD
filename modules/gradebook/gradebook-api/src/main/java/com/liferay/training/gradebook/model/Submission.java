@@ -23,7 +23,7 @@ import org.osgi.annotation.versioning.ProviderType;
 /**
  * The extended model interface for the Submission service. Represents a row in the &quot;Gradebook_Submission&quot; database table, with each column mapped to a property of this class.
  *
- * @author hgrahul
+ * @author IP
  * @see SubmissionModel
  * @generated
  */

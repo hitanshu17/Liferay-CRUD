@@ -29,7 +29,7 @@ import java.util.Date;
 /**
  * The cache model class for representing Assignment in entity cache.
  *
- * @author hgrahul
+ * @author IP
  * @generated
  */
 public class AssignmentCacheModel

@@ -26,7 +26,7 @@ import java.util.Map;
  * This class is a wrapper for {@link Submission}.
  * </p>
  *
- * @author hgrahul
+ * @author IP
  * @see Submission
  * @generated
  */

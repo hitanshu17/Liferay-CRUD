@@ -15,7 +15,7 @@
 package com.liferay.training.gradebook.model.impl;
 
 /**
- * @author hgrahul
+ * @author IP
  */
 public class AssignmentImpl extends AssignmentBaseImpl {
 }

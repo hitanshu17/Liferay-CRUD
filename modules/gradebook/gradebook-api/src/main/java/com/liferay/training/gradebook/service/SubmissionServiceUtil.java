@@ -22,7 +22,7 @@ package com.liferay.training.gradebook.service;
  * based on the propagated JAAS credentials because this service can be
  * accessed remotely.
  *
- * @author hgrahul
+ * @author IP
  * @see SubmissionService
  * @generated
  */

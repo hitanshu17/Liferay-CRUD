@@ -45,7 +45,7 @@ import com.liferay.training.gradebook.service.AssignmentServiceUtil;
  * The HTTP utility is only generated for remote services.
  * </p>
  *
- * @author hgrahul
+ * @author IP
  * @see AssignmentServiceSoap
  * @generated
  */

@@ -19,7 +19,7 @@ import com.liferay.portal.kernel.service.ServiceWrapper;
 /**
  * Provides a wrapper for {@link AssignmentService}.
  *
- * @author hgrahul
+ * @author IP
  * @see AssignmentService
  * @generated
  */

@@ -36,7 +36,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 
- * @author hgrahul
+ * @author IP
  * This Class Represents Asset Rendering Related To Assignment Entity
  */
 public class AssignmentAssetRenderer extends BaseJSPAssetRenderer<Assignment>{

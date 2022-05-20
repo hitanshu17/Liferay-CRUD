@@ -43,7 +43,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * credentials because this service can only be accessed from within the same
  * VM.
  *
- * @author hgrahul
+ * @author IP
  * @see SubmissionLocalServiceUtil
  * @generated
  */

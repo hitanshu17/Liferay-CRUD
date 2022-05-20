@@ -17,7 +17,7 @@ import org.osgi.service.component.annotations.Reference;
 
 /**
  * 
- * @author hgrahul
+ * @author IP
  * The Class Represent Process Action For Deleting An Assignment
  */
 @Component(

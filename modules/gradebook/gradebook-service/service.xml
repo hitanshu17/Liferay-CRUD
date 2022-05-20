@@ -3,7 +3,7 @@
 
 <service-builder dependency-injector="ds" package-path="com.liferay.training.gradebook" auto-namespace-tables="true">
 	<!-- For Providing Author Details For This Service Builder -->
-	<author>hgrahul</author>
+	<author>IP</author>
 	
 	<!-- For Providing Namespace Details For The Entities We Define Here -->
 	<namespace>Gradebook</namespace>

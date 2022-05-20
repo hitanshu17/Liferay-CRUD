@@ -15,7 +15,7 @@ import org.osgi.service.component.annotations.Component;
 
 /**
  * 
- * @author hgrahul
+ * @author IP
  * The Model Summary Contributor Constructs The Result Summary, Including The Field To Display
  */
 @Component(immediate = true, property = "indexer.class.name=com.liferay.training.gradebook.model.Assignment", service = ModelSummaryContributor.class)

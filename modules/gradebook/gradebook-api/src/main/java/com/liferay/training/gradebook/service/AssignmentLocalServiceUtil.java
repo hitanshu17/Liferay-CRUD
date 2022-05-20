@@ -33,7 +33,7 @@ import java.util.Map;
  * based on the propagated JAAS credentials because this service can only be
  * accessed from within the same VM.
  *
- * @author hgrahul
+ * @author IP
  * @see AssignmentLocalService
  * @generated
  */

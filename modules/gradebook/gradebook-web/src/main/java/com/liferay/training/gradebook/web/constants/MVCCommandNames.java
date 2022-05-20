@@ -2,7 +2,7 @@ package com.liferay.training.gradebook.web.constants;
 
 /**
  * 
- * @author hgrahul
+ * @author IP
  * Defining All My Command Which I Am Going To Use In This Gradebook Portlet
  */
 public class MVCCommandNames {

@@ -16,7 +16,7 @@ package com.liferay.training.gradebook.exception;
 import com.liferay.portal.kernel.exception.NoSuchModelException;
 
 /**
- * @author hgrahul
+ * @author IP
  */
 public class NoSuchSubmissionException extends NoSuchModelException {
 

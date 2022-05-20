@@ -27,7 +27,7 @@ import java.util.Map;
  * This class is a wrapper for {@link Assignment}.
  * </p>
  *
- * @author hgrahul
+ * @author IP
  * @see Assignment
  * @generated
  */
